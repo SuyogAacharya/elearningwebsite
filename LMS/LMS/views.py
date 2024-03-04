@@ -130,8 +130,8 @@ def MY_COURSE(request,):
 
 
 def WATCH_COURSE(request, slug):
-  
-    return render(request, 'course/watch_course.html')
+ 
+    return render(request, 'course/watch_course.html', context)
 
 def TEAM(request):
     team_members = TeamMember.objects.all()
