@@ -119,29 +119,27 @@ def CHECKOUT(request, slug):
     return render(request, 'checkout/checkout.html', context)
 
 
-def MY_COURSE(request, ):
+def MY_COURSE(request ):
     course = UserCourse.objects.filter(user= request.user)
     context ={
         'course':course,
     }
     return render(request, 'course/my_course.html', context)
 
-
-
-def WATCH_COURSE(request, slug):
-    course = Course.objects.filter(slug = slug )
-    lecture = request.GET.get('lecture')
-    video = Video.objects.get(id = lecture)
-    if course.exists():
-        course= course.first()
+def WATCH_COURSE(request, slug=None):
+    if slug:
+        course = get_object_or_404(Course, slug=slug)
     else:
-        return redirect ('404')
+        course = Course.objects.first()  # Fetch the first course if no slug is provided
+
+    # Retrieve the first video of the course if it exists
+    first_video = course.videos.first() if course else None
 
     context = {
-        'course' : course,
-        'video'  : video,
+        'course': course,
+        'video': first_video,
     }
-    return render(request, 'course/watch_course.html', context )
+    return render(request, 'course/watch_course.html', context)
 
 def TEAM(request):
     team_members = TeamMember.objects.all()
