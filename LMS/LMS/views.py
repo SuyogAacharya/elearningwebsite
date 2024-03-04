@@ -119,9 +119,8 @@ def CHECKOUT(request, slug):
     return render(request, 'checkout/checkout.html', context)
 
 
-def MY_COURSE(request,):
+def MY_COURSE(request, ):
     course = UserCourse.objects.filter(user= request.user)
-
     context ={
         'course':course,
     }
@@ -130,8 +129,19 @@ def MY_COURSE(request,):
 
 
 def WATCH_COURSE(request, slug):
- 
-    return render(request, 'course/watch_course.html', context)
+    course = Course.objects.filter(slug = slug )
+    lecture = request.GET.get('lecture')
+    video = Video.objects.get(id = lecture)
+    if course.exists():
+        course= course.first()
+    else:
+        return redirect ('404')
+
+    context = {
+        'course' : course,
+        'video'  : video,
+    }
+    return render(request, 'course/watch_course.html', context )
 
 def TEAM(request):
     team_members = TeamMember.objects.all()
