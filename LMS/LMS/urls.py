@@ -33,7 +33,7 @@ urlpatterns = [
     path('team', views.TEAM, name='team'),
     path('accounts/register',user_login.REGISTER, name='register' ),
     path('accounts/', include('django.contrib.auth.urls')),
-     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('doLogin', user_login.DO_LOGIN, name='doLogin'),
     path('accounts/profile',user_login.PROFILE, name='profile' ),
     path('accounts/profile/update',user_login.PROFILE_UPDATE, name='profile_update' ),
