@@ -24,33 +24,30 @@
     <img class="d-none img-fluid" src="...html" alt="...">
 </header>
 
-<!-- TEAM MEMBERS -->
-<div class="container pb-4 pb-xl-7">
-    <div class="row row-cols-md-3 row-cols-lg-4 mb-6 mb-xl-3">
-        {% for member in team_members %}
-        <div class="col-md pb-4 pb-md-7">
-            <div class="card border shadow p-2 lift">
-                <!-- Image -->
-                <div class="card-zoom position-relative">
-                    <div class="card-float card-hover right-0 left-0 bottom-0 mb-4">
-                        <ul class="nav mx-n4 justify-content-center">
-                            <li class="nav-item px-4">
-                                <a href="{{ member.whatsapp_link }}" class="d-block text-white">
-                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <a href="instructors-single.html" class="card-img sk-thumbnail img-ratio-4 card-hover-overlay d-block"><img class="rounded shadow-light-lg img-fluid" src="{{ member.image.url }}" alt="..."></a>
-                </div>
-                <!-- Footer -->
-                <div class="card-footer px-3 pt-4 pb-1">
-                    <a href="instructors-single.html" class="d-block"><h5 class="mb-0">{{ member.name }}</h5></a>
-                    <span class="font-size-d-sm">{{ member.role }}</span>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
+
+<div id="teachers" class="section wb">
+  <div class="container">
+      <div class="row">
+          {% for member in team_members %}
+          <div class="col-lg-3 col-md-6 col-12">
+              <div class="our-team">
+                  <div class="team-img">
+                      <img src="{{ member.image.url }}" alt="{{ member.name }}" class="rounded-square">
+                      <div class="social">
+                          <ul>
+                              <li><a href="{{ member.whatsapp_link }}" class="fa fa-whatsapp"></a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="team-content">
+                      <h3 class="title">{{ member.name }}</h3>
+                      <span class="post">{{ member.role }}</span>
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
 </div>
+
 {% endblock %}

@@ -1,109 +1,74 @@
-{% load static %}
-<footer class="pt-8 pt-md-11 bg-gray-100">
+<!--FOOTER-->
+<footer class="footer">
     <div class="container">
-        <div class="row" id="accordionFooter">
-            <div class="col-12 col-md-4 col-lg-4">
-                <!-- Brand -->
-                <img src="{% static 'assets/img/brand-gigas.jpg' %}" alt="Entrance Master" class="footer-brand img-fluid mb-4 h-60p">
-                <!-- Text -->
-                <p class="text-gray-800 mb-4 font-size-sm-alone">57300 Kolbung Ilam, Nepal</p>
-                <div class="mb-4">
-                    <a href="tel:+9779704143209" class="text-gray-800 font-size-sm-alone">+977-9704143209</a>
-                </div>
-                <div class="mb-4">
-                    <a href="mailto:entrancemaster2080@gmail.com" class="text-gray-800 font-size-sm-alone">entrancemaster2080@gmail.com</a>
-                </div>
-                <!-- Social -->
-                <ul class="list-unstyled list-inline list-social mb-4 mb-md-0">
-                    <li class="list-inline-item list-social-item">
-                        <a href="https://www.facebook.com/profile.php?id=61553562205688&mibextid=ZbWKwL" class="text-secondary font-size-sm w-36 h-36 shadow-dark-hover d-flex align-items-center justify-content-center rounded-circle border-hover">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item list-social-item">
-                        <a href="https://t.me/+rrCzEaO7r65hNDA1" class="text-secondary font-size-sm w-36 h-36 shadow-dark-hover d-flex align-items-center justify-content-center rounded-circle border-hover">
-                            <i class="fab fa-telegram"></i>
-                        </a>
-                    </li>
-                    <li class="list-inline-item list-social-item">
-                        <a href="https://www.youtube.com/@Sulav_acharya" class="text-secondary font-size-sm w-36 h-36 shadow-dark-hover d-flex align-items-center justify-content-center rounded-circle border-hover">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 col-md-4 col-lg-2">
-                <div class="mb-5 mb-xl-0 footer-accordion">
-                    <!-- Heading -->
-                    <div id="widgetOne">
-                        <h5 class="mb-5">
-                            <button class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#widgetcollapseOne" aria-expanded="true" aria-controls="widgetcollapseOne">
-                                Important Links
-                                <span class="ms-auto text-dark">
-                                    <!-- Icon -->
-                                    <svg width="15" height="2" viewBox="0 0 15 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <rect width="15" height="2" fill="currentColor"/>
-                                    </svg>
-                                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 7H15V9H0V7Z" fill="currentColor"/>
-                                        <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"/>
-                                    </svg>
-                                </span>
-                            </button>
-                        </h5>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="widget clearfix">
+                    <div class="widget-title">
+                        <h3>About US</h3>
                     </div>
-                    <div id="widgetcollapseOne" class="collapse show" aria-labelledby="widgetOne" data-parent="#accordionFooter">
-                        <!-- List -->
-                        <ul class="list-unstyled text-gray-800 font-size-sm-alone mb-6 mb-md-8 mb-lg-0">
-                            <li class="mb-3">
-                                <a href="{% url 'home' %}" class="text-reset">Home</a>
-                            </li>
-                            <li class="mb-3">
-                                <a href="{% url 'about_us' %}" class="text-reset">About Us</a>
-                            </li>
-                            <li class="mb-3">
-                                <a href="{% url 'contact_us' %}" class="text-reset">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
-                <div class="mb-5 mb-xl-0 ms-xl-6 footer-accordion">
-                    <h3>About Us</h3>
-                    <p>Welcome to Entrance Master, your trusted partner in academic excellence. We are dedicated to empowering students with the knowledge and skills they need to succeed in their academic and professional endeavors.</p>
-                    <p>Our team of expert educators provides top-notch virtual classes tailored to the unique needs of each student. Through innovative teaching methodologies and personalized guidance, we unlock the full potential of every learner.</p>
-                    <p>With a proven track record of success, Entrance Master has helped thousands of students achieve their academic goals. Whether you're preparing for NEB / Common Entrance Examinations, Chartered Accountancy, or other competitive exams, we are here to support you every step of the way.</p>
-                    <p>Join us on a journey of learning and discovery. Experience the difference with Entrance Master and embark on the path to a brighter future.</p>
-                </div>
-            </div>
+                    <p>Entrance Master is one of the leading<br> educational platforms providing virtual classes, mainly for NEB / Common Entrance Examinations, Chartered Accountancy, and other courses.
+  
+                        Producing thousands of successful students in every batch, EM is offering multiple courses at a minimal cost with renowned professional tutors.
+                        
+                        Join us on this revolutionary educational journey.</p>   
+        <div class="footer-right">
+          <ul class="footer-links-soi">
+            <li><a href="https://www.facebook.com/people/Entrance-Master/61553562205688/?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://www.youtube.com/@Sulav_acharya"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://www.youtube.com/@Sulav_acharya"><i class="fa fa-youtube"></i></a></li>
+            <li><a href="https://t.me/+rrCzEaO7r65hNDA1"><i class="fa fa-telegram"></i></a></li>
             
-            <div class="col-12 col-md-4 col-lg-2 d-xl-flex">
-                <div class="mb-5 mb-xl-0 ms-xl-auto footer-accordion">
-                    <!-- Add content if needed -->
-                </div>
-            </div>
-            <div class="col-12 mt-md-5">
-                <div class="border-top pb-5 pt-6 py-md-4 text-center text-xl-start d-flex flex-column d-md-block d-xl-flex flex-xl-row align-items-center">
-                    <p class="text-gray-800 font-size-sm-alone d-block mb-0 mb-md-2 mb-xl-0 order-1 order-md-0 px-9 px-md-0">Copyright © 2022 EntranceMaster. All Right Reserved.</p>
-                    <div class="ms-xl-auto d-flex flex-column flex-md-row align-items-stretch align-items-md-center justify-content-center">
-                        <ul class="navbar-nav flex-row flex-wrap font-size-sm-alone mb-3 mb-md-0 mx-n4 me-md-5 justify-content-center justify-content-lg-start order-1 order-md-0">
-                            <li class="nav-item py-2 py-md-0 px-0 border-top-0">
-                                <a href="{% url 'home' %}" class="nav-link px-4 fw-normal text-gray-800">Home</a>
-                            </li>
-                            <li class="nav-item py-2 py-md-0 px-0 border-top-0">
-                                <a href="{% url 'about_us' %}" class="nav-link px-4 fw-normal text-gray-800">About Us</a>
-                            </li>
-                            <li class="nav-item py-2 py-md-0 px-0 border-top-0">
-                                <a href="{% url 'contact_us' %}" class="nav-link px-4 fw-normal text-gray-800">Contact Us</a>
-                            </li>
-                        </ul>
+          </ul><!-- end links -->
+        </div>						
+                </div><!-- end clearfix -->
+            </div><!-- end col -->
+  
+    <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="widget clearfix">
+                    <div class="widget-title">
+                        <h3>Information Link</h3>
                     </div>
-                </div>
+                    <ul class="footer-links">
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about_us' %}">About</a></li>
+                     
+                        <li><a href="{% url 'team' %}">Team</a></li>
+                        <li><a href="{% url 'login' %}">Login/Register</a></li>
+                        
+          
+                    </ul><!-- end links -->
+                </div><!-- end clearfix -->
+            </div><!-- end col -->
+    
+            <div class="col-lg-4 col-md-4 col-xs-12">
+                <div class="widget clearfix">
+                    <div class="widget-title">
+                        <h3>Contact Details</h3>
+                    </div>
+  
+                    <ul class="footer-links">
+                        <li><a href="mailto:entrancemaster2080@gmail.com">entrancemaster2080@gmail.com</a></li>
+                        <li><a href="www.entrancemaster.com.np">www.entrancemaster.com.np</a></li>
+                        
+                        <li>+977-9815988048</li>
+                    </ul><!-- end links -->
+                </div><!-- end clearfix -->
+            </div><!-- end col -->
+    
+        </div><!-- end row -->
+    </div><!-- end container -->
+  </footer><!-- end footer -->
+  
+  
+  <div class="copyrights">
+    <div class="container">
+        <div class="footer-distributed">
+            <div class="footer-center">                   
+                <p class="footer-company-name">All Rights Reserved. &copy; 2023 <a href="index/">Entrancemaster.com.np</a></p>
             </div>
-        </div> <!-- / .row -->
-    </div> <!-- / .container -->
-</footer>
-
-
-
+        </div>
+    </div><!-- end container -->
+  </div><!-- end copyrights -->
+  
+  <a href="" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>

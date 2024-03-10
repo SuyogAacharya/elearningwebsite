@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from app.models import Categories, Course, Video, UserCourse, TeamMember
+from app.models import *
 from django.contrib import messages
 from django.db.models import Sum
 from django.http import Http404
@@ -57,7 +57,11 @@ def CONTACT_US(request):
     return render(request, 'main/contact_us.html' )
 
 def ABOUT_US(request):
-    return render(request, 'main/about_us.html' )
+    mission = Mission.objects.first()
+    vision = Vision.objects.first()
+    history = History.objects.first()
+    return render(request, 'main/about_us.html', {'mission': mission, 'vision': vision, 'history': history})
+
 
 def SEARCH_COURSE(request):
     query = request.GET['query']
