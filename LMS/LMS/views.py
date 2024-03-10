@@ -179,3 +179,13 @@ def MAIN_PROFILLE(request):
 def NOTICE (request):
     notices = Notice.objects.all()
     return render (request, 'main/notice.html', {'notices': notices})
+
+def ALL_COURSE(request):
+    categories = Categories.objects.all().order_by('id')
+    course = Course.objects.filter(status='PUBLISH').order_by('-id')
+
+    context = {
+        'category': categories,
+        'course': course,
+    }
+    return render(request, 'main/course.html', context)

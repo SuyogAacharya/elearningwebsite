@@ -43,4 +43,5 @@ urlpatterns = [
     path('sidebar', views.SIDEBAR, name='sidebar'),
     path('main_profile', views.MAIN_PROFILLE, name='main_profile'),
     path('notice', views.NOTICE, name='notice'),
+    path ('all_course', views.ALL_COURSE, name='all_course'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
