@@ -174,3 +174,8 @@ def MAIN_PROFILLE(request):
         'course':course,
     }
     return render(request, 'main/main_profile.html', context)
+
+
+def NOTICE (request):
+    notices = Notice.objects.all()
+    return render (request, 'main/notice.html', {'notices': notices})

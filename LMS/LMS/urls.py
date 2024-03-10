@@ -42,4 +42,5 @@ urlpatterns = [
     path('course/watch_course/<slug:slug>',  views.WATCH_COURSE, name='watch_course'),
     path('sidebar', views.SIDEBAR, name='sidebar'),
     path('main_profile', views.MAIN_PROFILLE, name='main_profile'),
+    path('notice', views.NOTICE, name='notice'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

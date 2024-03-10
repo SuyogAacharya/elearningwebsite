@@ -149,3 +149,12 @@ class StudentProfile(models.Model):
         return self.user.username
       else:
         return f"Profile of {self.user}"  # Fallback message
+
+        #notice model
+class Notice(models.Model):
+    title = models.CharField(max_length=200)
+    content = models.TextField()
+    date_posted = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title
