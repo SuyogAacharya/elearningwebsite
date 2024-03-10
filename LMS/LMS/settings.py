@@ -137,9 +137,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'login'
 
-
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'entrancemaster2080@gmail.com'
-EMAIL_HOST_PASSWORD = 'Admin@098'
+EMAIL_HOST_USER = 'acharya.sulav2061@gmail.com'
+EMAIL_HOST_PASSWORD = 'izam ivuo tfqc mtnx'
+
+# Allow pages to be displayed in iframes
+X_FRAME_OPTIONS = 'ALLOW'

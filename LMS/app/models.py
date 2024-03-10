@@ -139,4 +139,13 @@ class Vision(models.Model):
 class History(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(default='') 
-# for quiz model
+
+class StudentProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    profile_picture = models.ImageField(upload_to='profile_pictures', null=True, blank=True)
+
+    def __str__(self):
+      if self.user.username:
+        return self.user.username
+      else:
+        return f"Profile of {self.user}"  # Fallback message

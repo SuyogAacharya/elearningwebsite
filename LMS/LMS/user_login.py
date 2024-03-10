@@ -40,7 +40,7 @@ def DO_LOGIN(request):
                                      password=password)
         if user!=None:
            login(request,user)
-           return redirect('home')
+           return redirect('sidebar')
         else:
            messages.error(request,'Email and Password Are Invalid !')
            return redirect('login')

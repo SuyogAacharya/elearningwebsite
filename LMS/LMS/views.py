@@ -4,6 +4,8 @@ from django.contrib import messages
 from django.db.models import Sum
 from django.http import Http404
 from django.contrib.auth.decorators import login_required
+from .forms import ProfileForm
+
 def BASE(request):
     return render(request, 'base.html')
 
@@ -150,3 +152,25 @@ def TEAM(request):
     context = {'team_members': team_members}
     return render(request, 'main/team.html', context)
 
+def SIDEBAR(request):
+    return render(request, 'main/sidebar.html')
+
+def MAIN_PROFILLE(request): 
+     # Fetch the existing profile if it exists
+    student_profile, created = StudentProfile.objects.get_or_create(user=request.user)
+    course = UserCourse.objects.filter(user= request.user)
+
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES, instance=student_profile)
+        if form.is_valid():
+            form.save()
+            return redirect(reverse('main_profile'))  # Redirect to the same page after saving
+    else:
+        form = ProfileForm(instance=student_profile)
+    
+    context = {
+        'form': form,
+        'student_profile': student_profile,
+        'course':course,
+    }
+    return render(request, 'main/main_profile.html', context)
