@@ -189,3 +189,13 @@ def ALL_COURSE(request):
         'course': course,
     }
     return render(request, 'main/course.html', context)
+
+def COURSE(request):
+    categories = Categories.objects.all().order_by('id')
+    course = Course.objects.filter(status='PUBLISH').order_by('-id')
+
+    context = {
+        'category': categories,
+        'course': course,
+    }
+    return render(request, 'main/course.html', context)

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 {% block title%} Courses {% endblock %}
 {% load course_tags %}
 
@@ -14,16 +14,7 @@
               </div>
               <div class="col-xl-auto">
                   <!-- Nav -->
-                  <div class="nav justify-content-lg-start justify-content-xl-center justify-content-center tab-nav-1" id="pills-tab" role="tablist">
-                      <a class="btn-sm btn-pill me-1 mb-1 text-dark fw-medium px-6 active" id="pills-all-tab" data-bs-toggle="tab" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">
-                          All Categories
-                      </a>
-                      {% for i in category %}
-                      <a class="btn-sm btn-pill me-1 mb-1 text-dark fw-medium px-6" id="pills-art-tab" data-bs-toggle="tab" href="#pills-{{i.id}}" role="tab" aria-controls="pills-{{i.id}}" aria-selected="false">
-                          {{i.name}}
-                      </a>
-                      {% endfor %}
-                  </div>
+                
               </div>
           </div>
 
@@ -81,13 +72,7 @@
                                   <div class="position-relative">
                                       <a href="{{i.get_absolute_url}}" class="d-block stretched-link"><h4 class="line-clamp-2 h-md-48 h-lg-58 me-md-6 me-lg-10 me-xl-4 mb-2">{{i.title}}</h4></a>
 
-                                      <div class="d-lg-flex align-items-end flex-wrap mb-n1">
-                                          <div class="star-rating mb-2 mb-lg-0 me-lg-3">
-                                              <div class="rating" style="width:50%;"></div>
-                                          </div>
-
-                                        
-                                      </div>
+                                     
 
                                       <div class="row mx-n2 align-items-end">
                                           <div class="col px-2">
