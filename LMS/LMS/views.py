@@ -5,6 +5,7 @@ from django.db.models import Sum
 from django.http import Http404
 from django.contrib.auth.decorators import login_required
 from .forms import ProfileForm
+from django.http import JsonResponse
 
 def BASE(request):
     return render(request, 'base.html')
@@ -127,6 +128,7 @@ def CHECKOUT(request, slug):
 
 def MY_COURSE(request ):
     course = UserCourse.objects.filter(user= request.user)
+    
     context ={
         'course':course,
     }
@@ -199,3 +201,5 @@ def COURSE(request):
         'course': course,
     }
     return render(request, 'main/course.html', context)
+
+

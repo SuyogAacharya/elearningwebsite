@@ -25,6 +25,7 @@ urlpatterns = [
     path('admin', admin.site.urls),
     path ('', views.HOME, name='home' ),
     path('404', views.PAGE_NOT_FOUND , name='404'),
+    path('course/', views.COURSE, name='course'),
     path('single/course', views.SINGLE_COURSE, name='single_course'),
     path('course/<slug:slug>', views.COURSE_DETAILS, name='course_details'),
     path('search', views.SEARCH_COURSE, name='search_course'),
@@ -44,5 +45,4 @@ urlpatterns = [
     path('main_profile', views.MAIN_PROFILLE, name='main_profile'),
     path('notice', views.NOTICE, name='notice'),
     path ('all_course', views.ALL_COURSE, name='all_course'),
-    path('course', views.COURSE, name='course'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -23,20 +23,20 @@
                   <!-- Image -->
                   <div class="card-zoom position-relative">
                     <div class="badge-float sk-fade-top top-0 right-0 mt-4 me-4">
-                        <a href="/course/watch_course/{{ course.slug }}" class="btn btn-xs btn-dark text-white rounded-circle lift opacity-dot-7 me-1 p-2 d-inline-flex justify-content-center align-items-center w-36 h-36">
+                        <a href="{{i.get_absolute_url}}" class="btn btn-xs btn-dark text-white rounded-circle lift opacity-dot-7 me-1 p-2 d-inline-flex justify-content-center align-items-center w-36 h-36">
                             <!-- Icon -->
                             <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                                 <!-- Icon Path -->
                             </svg>
                         </a>
-                        <a href="/course/watch_course/{{ course.slug }}" class="btn btn-xs btn-dark text-white rounded-circle lift opacity-dot-7 p-2 d-inline-flex justify-content-center align-items-center w-36 h-36">
+                        <a href="{{i.get_absolute_url}}" class="btn btn-xs btn-dark text-white rounded-circle lift opacity-dot-7 p-2 d-inline-flex justify-content-center align-items-center w-36 h-36">
                             <!-- Icon -->
                             <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                                 <!-- Icon Path -->
                             </svg>
                         </a>
                     </div>
-                    <a href="/course/watch_course/{{ course.slug }}" class="card-img sk-thumbnail img-ratio-9 d-block">
+                    <a href="{{i.get_absolute_url}}" class="card-img sk-thumbnail img-ratio-9 d-block">
                         <img class="rounded shadow-light-lg" src="{{i.course.featured_image}}" alt="...">
                     </a>
                     <span class="badge sk-fade-bottom badge-lg badge-primary badge-pill badge-float bottom-0 left-0 mb-4 ms-4 fw-bold">
@@ -47,11 +47,11 @@
                 <!-- Footer -->
                 
                     <!-- Preheading -->
-                    <a href="/course/watch_course/{{ course.slug }}"><span class="mb-1 d-inline-block text-gray-800">{{i.course.category.name}}</span></a>
+                    <a href="{{i.get_absolute_url}}"><span class="mb-1 d-inline-block text-gray-800">{{i.course.category.name}}</span></a>
     
                     <!-- Heading -->
                     <div class="position-relative">
-                        <a href="/course/watch_course/{{ course.slug }}" class="d-block stretched-link">
+                        <a href="{{i.get_absolute_url}}" class="d-block stretched-link">
                             <h4 class="line-clamp-2 h-md-48 h-lg-58 me-md-6 me-lg-10 me-xl-4 mb-2">{{i.course.title}}
     
                             </h4>

@@ -17,6 +17,8 @@ class Video_TabularInline(admin.TabularInline):
 class CourseAdmin(admin.ModelAdmin):
     inlines = [What_You_Learn_TabularInline, Requirements_TabularInline, Video_TabularInline]
 
+
+
 admin.site.register(Categories)
 admin.site.register(Author)
 admin.site.register(Course, CourseAdmin)
@@ -30,3 +32,6 @@ admin.site.register(Vision)
 admin.site.register(History)
 admin.site.register(StudentProfile)
 admin.site.register(Notice)
+admin.site.register(Resources_course)
+admin.site.register(Resources_Question)
+admin.site.register(Resources_ScoreBoard)

@@ -140,6 +140,7 @@ class History(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(default='') 
 
+#model for student profile
 class StudentProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     profile_picture = models.ImageField(upload_to='profile_pictures', null=True, blank=True)
@@ -150,7 +151,7 @@ class StudentProfile(models.Model):
       else:
         return f"Profile of {self.user}"  # Fallback message
 
-        #notice model
+#notice model
 class Notice(models.Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
@@ -158,3 +159,31 @@ class Notice(models.Model):
 
     def __str__(self):
         return self.title
+
+#for resources model
+class Resources_course(models.Model):
+    Resources_course_name = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.Resources_course_name
+    
+
+class Resources_Question(models.Model):
+    Resources_course = models.ForeignKey(Resources_course, on_delete=models.CASCADE)
+    question = models.CharField(max_length=100)
+    answer = models.IntegerField()
+    option_one = models.CharField(max_length=100)
+    option_two = models.CharField(max_length=100)
+    option_three = models.CharField(max_length=100 , blank=True)
+    option_four = models.CharField(max_length=100 , blank=True)
+    
+    marks = models.IntegerField(default=1)
+    
+    def __str__(self):
+        return self.question
+    
+    
+class Resources_ScoreBoard(models.Model):
+    Resources_course = models.ForeignKey(Resources_course, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    score = models.IntegerField()
